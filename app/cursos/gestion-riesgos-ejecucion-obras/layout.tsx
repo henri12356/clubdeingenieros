@@ -1,11 +1,5 @@
-// app/cursos/gestion-riesgos-ejecucion-obras/layout.tsx
 import FloatingButtons from '@/app/floating-buttons';
 import { Metadata } from 'next';
-
-// Configuración base de la URL según el entorno
-const BASE_URL = process.env.NODE_ENV === 'production' 
-  ? 'https://clubdeingenieros.vercel.app' 
-  : 'https://clubdeingenieros.vercel.app';
 
 export const metadata: Metadata = {
   title: 'Gestión de Riesgos en Obras Civiles | Club de Ingenieros',
@@ -15,11 +9,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Gestión de Riesgos en Obras Civiles | Club de Ingenieros',
     description: 'Curso profesional sobre gestión de riesgos en construcción según normativa OSCE 012-2017. Certificación incluida.',
-    url: `${BASE_URL}/fondo01.jpg`,
+    url: 'https://clubdeingenieros.vercel.app/cursos/gestion-riesgos-ejecucion-obras',
     type: 'website',
     images: [
       {
-        url: `${BASE_URL}/fondo01.jpg`,
+        url: 'https://clubdeingenieros.vercel.app/fondo01.jpg',
         width: 1200,
         height: 630,
         alt: 'Curso de Gestión de Riesgos en Obras Civiles',
@@ -32,14 +26,12 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Gestión de Riesgos en Obras Civiles | Club de Ingenieros',
-    description: 'Curso profesional sobre gestión de riesgos en construcción según normativa OSCE 012-2017',
-    images: [`${BASE_URL}/fondo01.jpg`],
-    site: '@ClubIngenieros',
-    creator: '@ClubIngenieros',
+    description: 'Curso profesional sobre gestión de riesgos en construcción',
+    images: ['https://clubdeingenieros.vercel.app/fondo01.jpg'],
   },
 
   alternates: {
-    canonical: `${BASE_URL}/fondo01.jpg`,
+    canonical: 'https://clubdeingenieros.vercel.app/cursos/gestion-riesgos-ejecucion-obras',
   },
 
   robots: {
@@ -48,15 +40,7 @@ export const metadata: Metadata = {
     googleBot: {
       index: true,
       follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
     },
-  },
-
-  verification: {
-    google: 'TU_GOOGLE_VERIFICATION_CODE',
-    yandex: 'TU_YANDEX_VERIFICATION_CODE',
   },
 };
 
