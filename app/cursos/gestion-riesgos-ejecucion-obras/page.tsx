@@ -44,7 +44,7 @@ export default function GestionRiesgosPage() {
       <Navbar />
 
       {/* Breadcrumbs para SEO */}
-      <nav aria-label="Ruta de navegación" className="container mx-auto px-4 py-3 text-sm">
+      <nav aria-label="Ruta de navegación" className="container mx-auto px-4 py-3 text-sm bg-white">
         <ol className="flex space-x-2">
           <li><Link href="/" className="text-blue-600 hover:underline">Inicio</Link></li>
           <li>/</li>
