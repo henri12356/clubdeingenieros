@@ -70,38 +70,56 @@ const iconComponentsDocente = {
 
 // Datos del docente (sin cambios)
 const datosDocenteKevin: DatosDocenteKevin = {
-  nombreCompleto: "Ing. Kevin M. Navarro Chancan",
-  tituloPrincipal: "Ingeniero Agrícola Colegiado",
-  subtitulo: "Especialista en Evaluación de Riesgos (EVAR), Modelamiento Hidráulico e Hidrológico",
+  nombreCompleto: "Eliser Mejía Herrera",
+  tituloPrincipal: "Ingeniero Civil Colegiado",
+  subtitulo: "Especialista en Modelamiento Hidráulico e Hidrológico, Gestión de Proyectos y Seguridad de Presas",
   descripcionGeneral:
-    "Egresado de la Universidad Nacional Agraria La Molina, con sólida formación y experiencia en la gestión de recursos hídricos y la prevención de desastres. Comprometido con la aplicación de tecnologías y metodologías avanzadas para soluciones sostenibles.",
-  imagenUrl: "/fondo01.jpg", // Actualiza esta ruta!
-  email: "k.navarro@clubdeingenieros.com", // Ejemplo
+    "Ingeniero especializado en el desarrollo de proyectos de infraestructura hidráulica, con amplio conocimiento en modelamiento hidráulico, hidrológico y SIG. Sólida formación en el diseño de obras hidráulicas, así como en la implementación de sistemas de monitoreo y control hidrológico en operación de presas.",
+  imagenUrl: "/profesor01.jpg", // ¡IMPORTANTE: ACTUALIZA ESTA RUTA CON LA FOTO DE ELISER MEJÍA HERRERA!
+  email: "eliser.mejia@example.com", // Por favor, actualiza con el correo electrónico correcto de Eliser Mejía Herrera
   areasEstrategicas: [
-    { id: 1, area: "Modelamiento Hidrológico e Hidráulico", detalle: "HEC-HMS, HEC-RAS" },
-    { id: 2, area: "Evaluación de Riesgos de Desastres", detalle: "EVAR acreditado por CENEPRED" },
-    { id: 3, area: "Manejo de Software Especializado", detalle: "ArcGIS, ModelMuse, Civil 3D, MODFLOW" },
-    { id: 4, area: "Gestión de Recursos Hídricos en Microcuencas" },
-    { id: 5, area: "Programación Aplicada a Hidrología", detalle: "R y Matlab" },
+    { id: 1, area: "Dominio de HEC-RAS" },
+    { id: 2, area: "Dominio de HEC-HMS" },
+    { id: 3, area: "Dominio de RS MINERVE" },
+    { id: 4, area: "Dominio de QGIS" },
+    { id: 5, area: "Dominio de ACAD CIVIL 3D" },
+    { id: 6, area: "Dominio de Excel Avanzado" },
+    { id: 7, area: "Dominio de POWER BI" },
+    { id: 8, area: "Manejo de drones DJI" },
   ],
   proyectosDestacados: [
-    { id: 1, entidad: "CENEPRED", descripcion: "Escenarios de riesgo por inundaciones y remoción en masa (cuencas Chancay-Huaral y Lurín)." },
-    { id: 2, entidad: "SEDAPAL", descripcion: "Recuperación de servicios ecosistémicos de regulación hídrica en microcuencas." },
-    { id: 3, entidad: "Municipalidad de Santa Eulalia", descripcion: "Estudio de Gestión de Riesgos." },
+    { id: 1, entidad: "CONCESIONARIA TRASVASE OLMOS S.A. (01/2016 – 03/2025)", descripcion: "Coordinador de Hidrología: Responsable de la gestión hidrológica e hidrométrica en la presa Limón, incluyendo balances hídricos, diseño y modelamiento hidráulico de defensas ribereñas con HEC-RAS, análisis de riesgos de inundación con QGIS y control de sedimentos. Participó como Especialista en Hidráulica durante las inspecciones de seguridad de presa, además en implementación de planes de emergencia." },
+    { id: 2, entidad: "UTS – PROYECTOS Y SERVICIOS (10/2023 - 07/2024)", descripcion: "Especialista en Diseño Hidráulico: Revisó diseños hidráulicos de defensas ribereñas durante la construcción, realizando análisis hidrológicos e hidráulicos, interpretando datos topográficos y elaborando planos y especificaciones técnicas, asegurando cumplimiento normativo." },
+    { id: 3, entidad: "CONCESIONARIA H2OLMOS S.A. (09/2014 - 12/2015)", descripcion: "Asistente de Ingeniería: Implementó plan de operación y mantenimiento del sistema hídrico de Irrigación Olmos, controlando caudales, supervisando entregas y realizando balances hídricos." },
   ],
   formacionAdicional: [
-    { id: 1, nombre: "Curso de Evaluación de Daños y Análisis de Necesidades (EDAN)" },
-    { id: 2, nombre: "Curso de Plan de Prevención y Reducción de Riesgos de Desastres (PPRRD)" },
+    { id: 1, nombre: "Maestría en Ingeniería con Mención en Dirección y Gestión de Proyectos (03/2025) - Universidad Católica de Trujillo" },
+    { id: 2, nombre: "Ingeniero Civil (04/2024) - Universidad Cesar Vallejo" },
+    { id: 3, nombre: "Ingeniero Agrícola (04/2015) - Universidad Nacional Pedro Ruiz Gallo" },
+    { id: 4, nombre: "Experto en Hidrología Computacional y SIG para el Estudio y Gestión de Cuencas con QGIS (03/2025) - Centro de Altos Estudios en Geomática - CAEG" },
+    { id: 5, nombre: "CONTRATOS NEC: Planificación, Gestión y Trabajo Colaborativo en Proyecto Complejos (09/2024 - 11/2024) - CAPACITATION AND ENGINEERING ONLINE ACADEMY - CEO" },
+    { id: 6, nombre: "DIPLOMADO EN HIDRÁULICA FLUVIAL: DISEÑO Y CONTRUCCIÓN DE DEFENSAS RIBEREÑAS (09/2024 - 12/2024) - CERSA" },
+    { id: 7, nombre: "CURSO DE CAPACITACIÓN EN HIDROLOGÍA, HIDRÁULICA Y DRENAJE DE CARRETERAS (01/2024 - 02/2024) - Pontificia Universidad Católica del Perú - PUCP" },
+    { id: 8, nombre: "ESPECIALIZACIÓN: SUPERVISOR DE SEGURIDAD Y SALUD EN EL TRABAJO (11/2023 - 12/2023) - Colegio de Ingenieros del Perú" },
+    { id: 9, nombre: "ELABORACIÓN DEL ESTUDIO DE HIDROLOGÍA PARA PROYECTOS DE INFRAESTRUCTURA HIDRÁULICA Y RIEGO (08/2023) - Ministerio de Desarrollo Agrario y Riego" },
+    { id: 10, nombre: "AUSCULTACIÓN Y SEGURIDAD DE LAS PRESAS (02/2022) - RED INGENIERÍA - Argentina" },
+    { id: 11, nombre: "CURSO DE MODELAMIENTO HIDRÁULICO 2D CON HEC RAS V.6 (11/2021 - 01/2022) - CERSA" },
+    { id: 12, nombre: "IMPLEMENTADOR LIDER 5S CON ENFOQUE 9S (07/2021 - 08/2021) - ASESORES ESTRATÉGICOS" },
+    { id: 13, nombre: "CURSO DE ESPECIALIDAD HIDROLÓGICA APLICADA (03/2021 - 04/2021) - IEPI – Colegio de Ingenieros del Perú" },
+    { id: 14, nombre: "CURSO DE MODELACIÓN HIDROLÓGICA CON RS MINERVE (03/2021) - RHYDRO INGENIEROS" },
+    { id: 15, nombre: "INTERPRETACIÓN DE LAS NORMAS ISO 9001:2015 E ISO 14001:2015 EN LA NUEVA NORMALIDAD (10/2020) - ASESORES ESTRATÉGICOS" },
+    { id: 16, nombre: "DISEÑO, EXPLOTACIÓN Y SEGURIDAD DE PRESAS (CAF – BANCO DE DESARROLLO DE AMÉRICA LATINA)" }, // Asumiendo que esta es la continuación de la línea cortada
   ],
   rasgosProfesionales: [
-    "Alto dominio técnico",
-    "Liderazgo de equipos",
-    "Gestión sostenible",
-    "Adaptabilidad",
-    "Enfoque en soluciones",
+    "Trabajo en equipo",
+    "Liderazgo",
+    "Organización y planificación",
+    "Comunicación asertiva",
+    "Manejo de personal",
+    "Gestión de proyectos",
   ],
   redesSociales: [
-    { id: 1, nombre: "LinkedIn", url: "https://www.linkedin.com/in/kevin-navarro-chancan/", iconName: "Linkedin" },
+    { id: 1, nombre: "LinkedIn", url: "https://www.linkedin.com/in/eliser-mej%C3%ADa-herrera-3892189b/", iconName: "Linkedin" },
   ],
 };
 
@@ -156,7 +174,7 @@ const DocenteSection = () => {
   return (
     <motion.section 
       id="docente" 
-      className="py-16 md:py-24 bg-gradient-to-b from-background to-muted/30 dark:from-slate-900 dark:to-slate-950"
+      className="py-16 md:py-16 bg-gradient-to-b from-background to-muted/30 dark:from-slate-900 dark:to-slate-950"
       variants={containerVariants}
       initial="hidden"
       animate="visible"
@@ -166,13 +184,10 @@ const DocenteSection = () => {
           className="text-center mb-12 md:mb-16"
           variants={itemVariants}
         >
-          <div className="inline-flex items-center justify-center bg-primary/10 dark:bg-primary/20 p-2 rounded-full mb-4">
-            <Sparkles className="w-8 h-8 text-primary" />
-          </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-foreground">
             Conoce a tu Instructor
           </h2>
-          <p className="mt-3 text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="mt-3 text-lg md:text-xl text-slate-700 max-w-2xl mx-auto">
             Un profesional con la experiencia y dedicación para guiarte hacia el éxito.
           </p>
         </motion.div>
@@ -186,7 +201,7 @@ const DocenteSection = () => {
             >
               <h3 className="text-2xl md:text-3xl font-bold text-foreground">{datosDocenteKevin.nombreCompleto}</h3>
               <p className="text-lg md:text-xl text-primary font-medium mt-1">{datosDocenteKevin.tituloPrincipal}</p>
-              <p className="text-base text-muted-foreground mt-1 mb-4">{datosDocenteKevin.subtitulo}</p>
+              <p className="text-base text-muted-foreground mt-1 mb-4 ">{datosDocenteKevin.subtitulo}</p>
               <Separator className="my-4 md:my-6 bg-border" />
               <p className="text-muted-foreground leading-relaxed text-base">
                 {datosDocenteKevin.descripcionGeneral}
@@ -213,8 +228,8 @@ const DocenteSection = () => {
               <ul className="space-y-4 list-none p-0">
                 {datosDocenteKevin.proyectosDestacados.map(proyecto => (
                   <li key={proyecto.id} className="p-4 bg-background/50 dark:bg-muted/10 rounded-lg border border-border/30">
-                    <h4 className="font-semibold text-card-foreground">{proyecto.entidad}</h4>
-                    <p className="text-sm text-muted-foreground mt-1">{proyecto.descripcion}</p>
+                    <h4 className="font-semibold  text-slate-800">{proyecto.entidad}</h4>
+                    <p className="text-sm  mt-1 text-slate-800">{proyecto.descripcion}</p>
                   </li>
                 ))}
               </ul>

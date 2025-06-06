@@ -1,9 +1,9 @@
-'use client';
+"use client";
 
-import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
-import { FaWhatsapp } from 'react-icons/fa';
-import { JSX } from 'react/jsx-runtime';
+import React, { useState, useEffect } from "react";
+import { motion } from "framer-motion";
+import { FaWhatsapp } from "react-icons/fa";
+import { JSX } from "react/jsx-runtime";
 
 interface TimeLeft {
   days: number;
@@ -46,7 +46,12 @@ const Hero: React.FC = () => {
     return timeLeft;
   };
 
-  const [timeLeft, setTimeLeft] = useState<TimeLeft>({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+  const [timeLeft, setTimeLeft] = useState<TimeLeft>({
+    days: 0,
+    hours: 0,
+    minutes: 0,
+    seconds: 0,
+  });
   const [hasMounted, setHasMounted] = useState(false);
 
   useEffect(() => {
@@ -61,10 +66,10 @@ const Hero: React.FC = () => {
   }, []);
 
   const unitLabels: { [key in keyof TimeLeft]: string } = {
-    days: 'días',
-    hours: 'horas',
-    minutes: 'minutos',
-    seconds: 'segundos',
+    days: "días",
+    hours: "horas",
+    minutes: "minutos",
+    seconds: "segundos",
   };
 
   const timerComponents: JSX.Element[] = [];
@@ -76,7 +81,12 @@ const Hero: React.FC = () => {
           className="bg-gray-800 bg-opacity-50 rounded-lg p-2 sm:p-4 flex flex-col items-center shadow-lg min-w-[60px] sm:min-w-[80px] border border-yellow-500/20 backdrop-blur-sm"
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
-          transition={{ delay: 1.8 + index * 0.1, duration: 0.5, type: "spring", stiffness: 100 }}
+          transition={{
+            delay: 1.8 + index * 0.1,
+            duration: 0.5,
+            type: "spring",
+            stiffness: 100,
+          }}
         >
           <div className="text-2xl sm:text-4xl md:text-5xl font-extrabold text-yellow-400 leading-none drop-shadow-md">
             {value}
@@ -110,10 +120,10 @@ const Hero: React.FC = () => {
     <div
       className="relative min-h-screen flex items-center justify-center px-4 py-8 sm:p-4 font-sans overflow-hidden"
       style={{
-        backgroundImage: 'url(/fondo01.jpg)',
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat',
+        backgroundImage: "url(/fondo.webp)",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
       }}
     >
       <motion.div
@@ -129,7 +139,12 @@ const Hero: React.FC = () => {
             className="w-full h-auto mx-auto max-w-[120px] sm:max-w-[180px] md:max-w-[200px] rounded-full shadow-lg"
             initial={{ scale: 0.8, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
-            transition={{ delay: 0.2, duration: 0.6, type: "spring", stiffness: 150 }}
+            transition={{
+              delay: 0.2,
+              duration: 0.6,
+              type: "spring",
+              stiffness: 150,
+            }}
           />
         </motion.div>
 
@@ -144,7 +159,8 @@ const Hero: React.FC = () => {
           className="text-base sm:text-xl md:text-2xl lg:text-3xl text-white mb-4 sm:mb-6 md:mb-8 leading-relaxed drop-shadow-lg"
           variants={itemVariants}
         >
-          Gestión de riesgos en la planificación de la ejecución de obras, según la directiva vigente N.° 012-2017-OSCE/CD
+          ANALISIS DE CUENCAS HIDROGRAFICAS CON QGIS QGIS APLICADO A CUENCAS
+          HIDROGRÁFICAS
         </motion.p>
 
         <motion.p
@@ -162,7 +178,8 @@ const Hero: React.FC = () => {
           className="text-sm sm:text-xl md:text-2xl text-yellow-400 mb-4 sm:mb-6 md:mb-8 flex items-center justify-center gap-1 sm:gap-2 drop-shadow-md"
           variants={itemVariants}
         >
-          ¡CUPOS LIMITADOS! RESERVA AHORA TU LUGAR PARA PARTICIPAR EN LA TRANSMISIÓN EN VIVO DE ESTE CURSO VIRTUAL.
+          ¡CUPOS LIMITADOS! RESERVA AHORA TU LUGAR PARA PARTICIPAR EN LA
+          TRANSMISIÓN EN VIVO DE ESTE CURSO VIRTUAL.
         </motion.p>
 
         <motion.a
@@ -174,7 +191,9 @@ const Hero: React.FC = () => {
           whileTap={{ scale: 0.95 }}
           variants={itemVariants}
         >
-          <span className="hidden sm:inline">ÚNETE AHORA A NUESTRA COMUNIDAD PRIVADA DE WHATSAPP (CLIC AQUÍ)</span>
+          <span className="hidden sm:inline">
+            ÚNETE AHORA A NUESTRA COMUNIDAD PRIVADA DE WHATSAPP (CLIC AQUÍ)
+          </span>
           <span className="sm:hidden">ÚNETE POR WHATSAPP</span>
         </motion.a>
       </motion.div>
