@@ -23,7 +23,7 @@ const CourseDetailsCard: React.FC = () => {
   const PROMOTION_END_DATE = {
     year: 2025,
     month: 6, // June
-    day: 4,
+    day: 15,
     hour: 12,
     minute: 0,
   };
@@ -162,7 +162,7 @@ const CourseDetailsCard: React.FC = () => {
           </div>
           <div className="flex items-center">
             <Users className="h-5 w-5 text-blue-500 mr-3 flex-shrink-0" />
-            <span>224.605 estudiantes</span>
+            <span>224 estudiantes</span>
           </div>
           <div className="flex items-center">
             <BookOpen className="h-5 w-5 text-purple-500 mr-3 flex-shrink-0" />
@@ -182,7 +182,7 @@ const CourseDetailsCard: React.FC = () => {
           </div>
           <div className="flex items-center">
             <Award className="h-5 w-5 text-indigo-500 mr-3 flex-shrink-0" />
-            <span>Audio: Español, Inglés</span>
+            <span>Audio: Español</span>
           </div>
         </div>
 

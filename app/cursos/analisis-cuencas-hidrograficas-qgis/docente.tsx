@@ -1,32 +1,32 @@
-// app/cursos/gestion-riesgos-ejecucion-obras/docente.tsx
 'use client';
 
 import React from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
-import { 
-  Linkedin, 
-  Twitter, 
-  Github, 
-  Globe, 
-  Briefcase, 
-  GraduationCap, 
-  ShieldCheck, 
-  Star, 
-  Settings, 
+import {
+  Linkedin,
+  Twitter,
+  Github,
+  Globe,
+  Briefcase,
+  GraduationCap,
+  ShieldCheck,
+  Star,
+  Settings,
   Zap,
-  Sparkles, // Nuevo icono para el título
-  ChevronRight // Nuevo icono para listas
+  Sparkles,
+  ChevronRight,
+  Mail, // Added Mail icon for email
 } from 'lucide-react';
 
-// Componentes Shadcn/UI (asegúrate que las rutas son correctas para tu proyecto)
+// Shadcn/UI Components
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Separator } from '@/components/ui/separator';
 
-// Interfaces (sin cambios)
+// Interfaces (No changes needed, keeping them as is)
 interface ProyectoDestacado {
   id: number;
   entidad: string;
@@ -66,17 +66,18 @@ const iconComponentsDocente = {
   Twitter,
   Github,
   Globe,
+  Mail, // Added Mail icon here
 };
 
-// Datos del docente (sin cambios)
+// Docente Data (No changes needed, keeping it as is)
 const datosDocenteKevin: DatosDocenteKevin = {
   nombreCompleto: "Eliser Mejía Herrera",
   tituloPrincipal: "Ingeniero Civil Colegiado",
   subtitulo: "Especialista en Modelamiento Hidráulico e Hidrológico, Gestión de Proyectos y Seguridad de Presas",
   descripcionGeneral:
     "Ingeniero especializado en el desarrollo de proyectos de infraestructura hidráulica, con amplio conocimiento en modelamiento hidráulico, hidrológico y SIG. Sólida formación en el diseño de obras hidráulicas, así como en la implementación de sistemas de monitoreo y control hidrológico en operación de presas.",
-  imagenUrl: "/profesor01.jpg", // ¡IMPORTANTE: ACTUALIZA ESTA RUTA CON LA FOTO DE ELISER MEJÍA HERRERA!
-  email: "eliser.mejia@example.com", // Por favor, actualiza con el correo electrónico correcto de Eliser Mejía Herrera
+  imagenUrl: "/profesor01.jpg", // Make sure this path is correct for Eliser Mejía Herrera's photo!
+  email: "emejiah.1507@gmail.com", // Please update with the correct email for Eliser Mejía Herrera
   areasEstrategicas: [
     { id: 1, area: "Dominio de HEC-RAS" },
     { id: 2, area: "Dominio de HEC-HMS" },
@@ -108,7 +109,7 @@ const datosDocenteKevin: DatosDocenteKevin = {
     { id: 13, nombre: "CURSO DE ESPECIALIDAD HIDROLÓGICA APLICADA (03/2021 - 04/2021) - IEPI – Colegio de Ingenieros del Perú" },
     { id: 14, nombre: "CURSO DE MODELACIÓN HIDROLÓGICA CON RS MINERVE (03/2021) - RHYDRO INGENIEROS" },
     { id: 15, nombre: "INTERPRETACIÓN DE LAS NORMAS ISO 9001:2015 E ISO 14001:2015 EN LA NUEVA NORMALIDAD (10/2020) - ASESORES ESTRATÉGICOS" },
-    { id: 16, nombre: "DISEÑO, EXPLOTACIÓN Y SEGURIDAD DE PRESAS (CAF – BANCO DE DESARROLLO DE AMÉRICA LATINA)" }, // Asumiendo que esta es la continuación de la línea cortada
+    { id: 16, nombre: "DISEÑO, EXPLOTACIÓN Y SEGURIDAD DE PRESAS (CAF – BANCO DE DESARROLLO DE AMÉRICA LATINA)" },
   ],
   rasgosProfesionales: [
     "Trabajo en equipo",
@@ -124,12 +125,12 @@ const datosDocenteKevin: DatosDocenteKevin = {
 };
 
 const DocenteSection = () => {
-  // Variantes de animación de Framer Motion
+  // Framer Motion animation variants
   const containerVariants = {
     hidden: { opacity: 0 },
-    visible: { 
-      opacity: 1, 
-      transition: { staggerChildren: 0.15, delayChildren: 0.2 } 
+    visible: {
+      opacity: 1,
+      transition: { staggerChildren: 0.15, delayChildren: 0.2 }
     },
   };
 
@@ -154,7 +155,7 @@ const DocenteSection = () => {
     "Rasgos Profesionales": <Star className="w-5 h-5 mr-2 text-accent-foreground" />,
   };
 
-  // Helper para renderizar secciones con Cards estilizadas
+  // Helper to render sections with styled Cards
   const renderSection = (title: keyof typeof sectionIconMap, content: React.ReactNode) => (
     <motion.div variants={itemVariants}>
       <Card className="overflow-hidden transition-all duration-300 ease-out hover:shadow-2xl bg-card border-border/50 dark:border-border/30">
@@ -172,15 +173,15 @@ const DocenteSection = () => {
   );
 
   return (
-    <motion.section 
-      id="docente" 
+    <motion.section
+      id="docente"
       className="py-16 md:py-16 bg-gradient-to-b from-background to-muted/30 dark:from-slate-900 dark:to-slate-950"
       variants={containerVariants}
       initial="hidden"
       animate="visible"
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.div 
+        <motion.div
           className="text-center mb-12 md:mb-16"
           variants={itemVariants}
         >
@@ -191,13 +192,90 @@ const DocenteSection = () => {
             Un profesional con la experiencia y dedicación para guiarte hacia el éxito.
           </p>
         </motion.div>
-        
+
+        {/* Responsive flex container: order-last on lg for left column, order-first on lg for right column */}
         <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-start">
-          {/* Columna Izquierda (Información Detallada) */}
-          <motion.div className="lg:w-2/3 space-y-6 md:space-y-8" variants={containerVariants}> {/* Aplicar stagger a las cards */}
+          {/* Columna Derecha (Avatar y Redes) - Appears first on mobile, then floats right on desktop */}
+          <motion.div
+            className="w-full lg:w-1/3 lg:sticky lg:top-28 order-first lg:order-last" // `order-first` for mobile, `lg:order-last` for desktop
+            variants={itemVariants}
+          >
+            <Card className="shadow-xl text-center p-6 bg-card border-border/50 dark:border-border/30 overflow-hidden">
+              <motion.div
+                className="relative"
+                initial={{ opacity: 0, y: -20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.3, duration: 0.5 }}
+              >
+                <div className="absolute inset-0 top-0 rounded-t-xl z-0 overflow-hidden">
+                  <Image
+                    src="/fondo.webp" // **<-- CHANGE THIS TO YOUR IMAGE PATH**
+                    alt="Fondo decorativo"
+                    layout="fill"
+                    objectFit="cover"
+                    quality={75}
+                  />
+                </div>
+                <Avatar className="relative w-32 h-32 md:w-40 md:h-40 mx-auto mb-5 border-4 border-background shadow-2xl ring-2 ring-primary">
+                  <AvatarImage asChild src={datosDocenteKevin.imagenUrl}>
+                    <Image
+                      src={datosDocenteKevin.imagenUrl}
+                      alt={`Fotografía de ${datosDocenteKevin.nombreCompleto}`}
+                      width={160}
+                      height={160}
+                      className="object-cover"
+                      priority
+                    />
+                  </AvatarImage>
+                  <AvatarFallback className="text-3xl md:text-4xl bg-muted text-muted-foreground">
+                    {datosDocenteKevin.nombreCompleto.split(" ").map((n) => n[0]).slice(0, 2).join("")}
+                  </AvatarFallback>
+                </Avatar>
+              </motion.div>
+              <h2 className="text-xl md:text-2xl font-bold text-foreground">{datosDocenteKevin.nombreCompleto}</h2>
+              <p className="text-sm md:text-base text-primary font-medium">{datosDocenteKevin.tituloPrincipal}</p>
+              {datosDocenteKevin.email &&
+                <a href={`mailto:${datosDocenteKevin.email}`} className="text-xs md:text-sm text-muted-foreground hover:text-primary transition-colors duration-200 block mt-1">
+                  <span className="inline-flex items-center">
+                    <Mail className="h-3.5 w-3.5 mr-1" /> {datosDocenteKevin.email}
+                  </span>
+                </a>
+              }
+
+              <Separator className=" bg-border" />
+
+              {datosDocenteKevin.redesSociales.length > 0 && (
+                <>
+                  <h3 className="text-base md:text-lg font-semibold text-foreground ">Conecta con el Ingeniero</h3>
+                  <div className="flex justify-center ">
+                    {datosDocenteKevin.redesSociales.map((red) => {
+                      const IconComponent = iconComponentsDocente[red.iconName];
+                      return (
+                        <motion.div
+                          key={red.id}
+                          whileHover={{ scale: 1.15, y: -3, rotate: 3 }}
+                          whileTap={{ scale: 0.9 }}
+                          transition={{ type: 'spring', stiffness: 300 }}
+                        >
+                          <Button asChild variant="outline" size="icon" className="rounded-full border-border hover:border-primary hover:bg-primary/5 dark:hover:border-primary transition-all duration-200">
+                            <a href={red.url} target="_blank" rel="noopener noreferrer" aria-label={red.nombre} className="text-muted-foreground hover:text-primary">
+                              <IconComponent className="w-5 h-5" />
+                            </a>
+                          </Button>
+                        </motion.div>
+                      );
+                    })}
+                  </div>
+                </>
+              )}
+            </Card>
+          </motion.div>
+
+          {/* Columna Izquierda (Información Detallada) - Appears after image on mobile, then takes left on desktop */}
+          <motion.div className="w-full lg:w-2/3 space-y-6 md:space-y-8 order-last lg:order-first" variants={containerVariants}> {/* `order-last` for mobile, `lg:order-first` for desktop */}
             <motion.div
               variants={itemVariants}
-              className="p-6 md:p-8 bg-card border border-border/50 dark:border-border/30 rounded-xl shadow-lg" // Usar bg-card para consistencia
+              className="p-6 md:p-8 bg-card border border-border/50 dark:border-border/30 rounded-xl shadow-lg"
             >
               <h3 className="text-2xl md:text-3xl font-bold text-foreground">{datosDocenteKevin.nombreCompleto}</h3>
               <p className="text-lg md:text-xl text-primary font-medium mt-1">{datosDocenteKevin.tituloPrincipal}</p>
@@ -228,8 +306,8 @@ const DocenteSection = () => {
               <ul className="space-y-4 list-none p-0">
                 {datosDocenteKevin.proyectosDestacados.map(proyecto => (
                   <li key={proyecto.id} className="p-4 bg-background/50 dark:bg-muted/10 rounded-lg border border-border/30">
-                    <h4 className="font-semibold  text-slate-800">{proyecto.entidad}</h4>
-                    <p className="text-sm  mt-1 text-slate-800">{proyecto.descripcion}</p>
+                    <h4 className="font-semibold text-slate-800">{proyecto.entidad}</h4>
+                    <p className="text-sm mt-1 text-slate-800">{proyecto.descripcion}</p>
                   </li>
                 ))}
               </ul>
@@ -251,83 +329,12 @@ const DocenteSection = () => {
               "Rasgos Profesionales",
               <div className="flex flex-wrap gap-2 md:gap-3">
                 {datosDocenteKevin.rasgosProfesionales.map((rasgo, index) => (
-                  // Usar variant="default" o "secondary" de Badge para que tome el tema de Shadcn
-                  // O definir un estilo consistente para las badges
                   <Badge key={index} variant="secondary" className="text-sm font-normal px-3 py-1 bg-primary/10 text-primary border-primary/20 hover:bg-primary/20 dark:bg-primary/20 dark:text-primary-foreground dark:border-primary/30">
                     {rasgo}
                   </Badge>
                 ))}
               </div>
             )}
-          </motion.div>
-
-          {/* Columna Derecha (Avatar y Redes) - Sticky */}
-          <motion.div 
-            className="lg:w-1/3 lg:sticky lg:top-28" // Ajustar top según altura del navbar
-            variants={itemVariants}
-          >
-            <Card className="shadow-xl text-center p-6 md:p-8 bg-card border-border/50 dark:border-border/30 overflow-hidden">
-              <motion.div
-                className="relative"
-                initial={{ opacity: 0, y: -20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.3, duration: 0.5 }}
-              >
-                {/* Elemento decorativo de fondo para el Avatar */}
-                <div className="absolute inset-0 opacity-50 dark:opacity-30">
-                  <div className="w-full h-1/2 bg-gradient-to-b from-primary/20 to-transparent dark:from-primary/30"></div>
-                </div>
-                <Avatar className="relative w-32 h-32 md:w-40 md:h-40 mx-auto mb-5 border-4 border-background shadow-2xl ring-2 ring-primary">
-                  <AvatarImage asChild src={datosDocenteKevin.imagenUrl}>
-                      <Image
-                          src={datosDocenteKevin.imagenUrl}
-                          alt={`Fotografía de ${datosDocenteKevin.nombreCompleto}`}
-                          width={160} // Tamaño para el <Image>
-                          height={160}
-                          className="object-cover"
-                          priority
-                      />
-                  </AvatarImage>
-                  <AvatarFallback className="text-3xl md:text-4xl bg-muted text-muted-foreground">
-                    {datosDocenteKevin.nombreCompleto.split(" ").map((n) => n[0]).slice(0,2).join("")}
-                  </AvatarFallback>
-                </Avatar>
-              </motion.div>
-              <h2 className="text-xl md:text-2xl font-bold text-foreground">{datosDocenteKevin.nombreCompleto}</h2>
-              <p className="text-sm md:text-base text-primary font-medium">{datosDocenteKevin.tituloPrincipal}</p>
-              {datosDocenteKevin.email && 
-                <a href={`mailto:${datosDocenteKevin.email}`} className="text-xs md:text-sm text-muted-foreground hover:text-primary transition-colors duration-200 block mt-1 mb-4">
-                  {datosDocenteKevin.email}
-                </a>
-              }
-              
-              <Separator className="my-4 md:my-6 bg-border" />
-
-              {datosDocenteKevin.redesSociales.length > 0 && (
-                <>
-                  <h3 className="text-base md:text-lg font-semibold text-foreground mb-3">Conecta con el Ingeniero</h3>
-                  <div className="flex justify-center space-x-3">
-                    {datosDocenteKevin.redesSociales.map((red) => {
-                      const IconComponent = iconComponentsDocente[red.iconName];
-                      return (
-                        <motion.div
-                          key={red.id}
-                          whileHover={{ scale: 1.15, y: -3, rotate: 3 }}
-                          whileTap={{ scale: 0.9 }}
-                          transition={{ type: 'spring', stiffness: 300 }}
-                        >
-                          <Button asChild variant="outline" size="icon" className="rounded-full border-border hover:border-primary hover:bg-primary/5 dark:hover:border-primary dark:hover:bg-primary/10 transition-all duration-200">
-                            <a href={red.url} target="_blank" rel="noopener noreferrer" aria-label={red.nombre} className="text-muted-foreground hover:text-primary">
-                              <IconComponent className="w-5 h-5" />
-                            </a>
-                          </Button>
-                        </motion.div>
-                      );
-                    })}
-                  </div>
-                </>
-              )}
-            </Card>
           </motion.div>
         </div>
       </div>

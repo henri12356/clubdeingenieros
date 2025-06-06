@@ -15,12 +15,11 @@ import {
 const Footer = () => {
   // Data for "Acerca de" section links
   const aboutLinks = [
-    { name: "¿Sobre Nosotros?", href: "/about" },
-    { name: "El equipo", href: "#" },
-    { name: "Los profesores", href: "/about/profesores" },
-    { name: "Enunciado de misión", href: "/about/mision" },
-    { name: "Marca y logotipo", href: "/about/marca" },
-    { name: "Cultura", href: "/about/cultura" },
+    { name: "¿Sobre Nosotros?", href: "https://www.clubdeingeniero.com/about" },
+    { name: "El equipo", href: "https://www.clubdeingeniero.com/docentes" },
+    { name: "Los profesores", href: "https://www.clubdeingeniero.com/docentes" },
+    { name: "Enunciado de misión", href: "https://www.clubdeingeniero.com/about" },
+    { name: "Marca y logotipo", href: "https://www.clubdeingeniero.com/about" },
   ];
 
   // Data for "Conecta con EDteam" sections
@@ -38,10 +37,10 @@ const Footer = () => {
 
   // Data for "Nuestros productos" section links
   const productLinks = [
-    { name: "Recursos gratis", href: "/recursos-gratis" },
-    { name: "Cursos gratis", href: "/cursos-gratis" },
-    { name: "Blog", href: "/blog" },
-    { name: "Comunidad", href: "/comunidad" },
+    { name: "Recursos gratis", href: "/" },
+    { name: "Cursos gratis", href: "/" },
+    { name: "Blog", href: "/" },
+    { name: "Comunidad", href: "/" },
   ];
 
   // Data for social media links
@@ -71,10 +70,10 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-[#E1F5FE] border-t border-gray-200 text-gray-800">
+    <footer className="bg-[#FAFAFA] border-t border-gray-200 text-gray-800">
       <div className="container mx-auto px-4 py-8 sm:px-6 md:px-8 lg:px-12 xl:px-16 md:py-12 lg:py-16">
         {/* Top section: Logo and back to top */}
-        <div className="hidden md:flex justify-between items-center ">
+        <div className="hidden md:flex justify-between items-center">
           <Link
             href="/"
             className="flex items-center group relative h-12 w-48 md:h-16 md:w-64 lg:w-80 xl:w-96"
@@ -85,12 +84,19 @@ const Footer = () => {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.3, ease: "easeOut" }}
             >
-            
+              <Image
+                src="/logo.png"
+                alt="Logo de club de ingenieros"
+                fill
+                sizes="(max-width: 768px) 192px, (max-width: 1200px) 256px, 384px"
+                className="object-contain object-left transition-transform group-hover:scale-105"
+                priority
+              />
             </motion.div>
           </Link>
           <button
             onClick={scrollToTop}
-            className="flex items-center text-sm font-medium text-red-600 hover:text-red-600 transition-colors group"
+            className="flex items-center text-sm font-medium text-red-600 hover:text-red-950 transition-colors group"
             aria-label="Volver arriba"
           >
             Volver arriba
@@ -113,7 +119,7 @@ const Footer = () => {
               >
                 <Image
                   src="/logo.png"
-                  alt="Logo Asociación de Enfermeros"
+                  alt="Logo de club de ingenieros"
                   fill
                   sizes="100vw"
                   className="object-contain transition-transform group-hover:scale-105"
@@ -190,7 +196,7 @@ const Footer = () => {
                       href={link.href}
                       className="text-gray-700 hover:text-red-600 hover:underline transition-colors flex items-center text-sm group"
                     >
-                      <span className="inline-block w-1.5 h-1.5 rounded-full bg-red-600 mr-2 flex-shrink-0 group-hover:bg-red-600 transition-colors"></span>
+                      <span className="inline-block w-1.5 h-1.5 rounded-full bg-red-600 mr-2 flex-shrink-0 group-hover:bg-red-500 transition-colors"></span>
                       {link.name}
                     </Link>
                   </li>
@@ -203,7 +209,7 @@ const Footer = () => {
           <div className="hidden md:flex flex-col items-start py-2">
             <p className="text-gray-700 mb-4 sm:mb-6 text-sm leading-relaxed">
               Comprometidos con la excelencia en la formación y el desarrollo
-              profesional de enfermeros.
+              profesional de Ingenieros en el peru.
             </p>
             <div className="flex gap-3 mt-auto">
               {socialLinks.map((social) => (
@@ -239,7 +245,7 @@ const Footer = () => {
         {/* Copyright and Legal Links */}
         <div className="flex flex-col md:flex-row justify-between items-center pt-2 sm:pt-4">
           <div className="text-gray-600 text-xs sm:text-sm mb-3 md:mb-0 text-center md:text-left leading-relaxed">
-            © {new Date().getFullYear()} Asociacion de enfermeros del peru.
+            © {new Date().getFullYear()} Club de Ingenieros.
             Todos los derechos reservados.
           </div>
           <nav className="flex flex-wrap justify-center gap-x-3 sm:gap-x-4 gap-y-1 sm:gap-y-2 items-center">

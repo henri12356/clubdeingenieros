@@ -8,11 +8,11 @@ import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 
 const links = [
-  { href: "/cursosall", label: "Cursos" },
-  { href: "/projects", label: "Certificados" },
-  { href: "/docentes", label: "Profesores" },
-  { href: "/about", label: "Nosotros" },
-  { href: "/profesor", label: "Trabaja con nosotros" },
+  { href: "https://www.clubdeingeniero.com/cursosall", label: "Cursos" },
+  { href: "https://www.clubdeingeniero.com/projects", label: "Certificados" },
+  { href: "https://www.clubdeingeniero.com/docentes", label: "Profesores" },
+  { href: "https://www.clubdeingeniero.com/about", label: "Nosotros" },
+  { href: "https://www.clubdeingeniero.com/profesor", label: "Trabaja con nosotros" },
 ];
 
 const Navbar = () => {
@@ -134,7 +134,7 @@ const Navbar = () => {
               >
                 <Image
                   src="/logo.png"
-                  alt="Logo Asociación de Enfermeros"
+                  alt="Logo de club de ingenieros"
                   fill
                   sizes="(max-width: 768px) 192px, (max-width: 1200px) 256px, 384px"
                   className="object-contain object-left transition-transform group-hover:scale-105"
@@ -177,7 +177,7 @@ const Navbar = () => {
 
             {/* Botón móvil (Hamburguesa / X) */}
             <motion.button
-              className="md:hidden p-2 rounded-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0d70af] transition-transform duration-200 z-[100]"
+              className="md:hidden p-2 rounded-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red-600 transition-transform duration-200 z-[100]"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               aria-label="Menú de navegación"
               whileTap={{ scale: 0.9 }}
@@ -211,17 +211,17 @@ const Navbar = () => {
                 animate="open"
                 exit="closed"
                 variants={mobileMenuContainerVariants}
-                className="fixed top-0 right-0 h-full w-3/4 max-w-xs bg-[#E1F5FE] shadow-xl md:hidden z-50 flex flex-col border-l border-gray-200" // bg-white, sharper shadow, border
+                className="fixed top-0 right-0 h-full w-3/4 max-w-xs bg-white shadow-xl md:hidden z-50 flex flex-col border-l border-gray-200" // bg-white, sharper shadow, border
               >
                 {/* Header del menú con botón de cierre */}
-                <div className="flex justify-end p-4 border-b bg-[#E1F5FE]"> {/* Added border-b for separation */}
+                <div className="flex justify-end p-4 border-b bg-white"> {/* Added border-b for separation */}
                   <motion.button
-                    className="p-2 rounded-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 transition-transform duration-200"
+                    className="p-2 rounded-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red-600 transition-transform duration-200"
                     onClick={() => setMobileMenuOpen(false)}
                     aria-label="Cerrar menú"
                     whileTap={{ scale: 0.9 }}
                   >
-                    <X className="w-7 h-7 text-gray-500 hover:text-gray-700" /> {/* Neutral icon color */}
+                    <X className="w-7 h-7 text-gray-500 hover:text-red-500" /> {/* Neutral icon color */}
                   </motion.button>
                 </div>
 
@@ -233,10 +233,10 @@ const Navbar = () => {
                         href={link.href}
                         className={`
                           block w-full text-left py-2 px-3 rounded-md text-base font-medium
-                          text-gray-700 hover:text-gray-900 hover:bg-gray-100
-                          focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500
+                          text-gray-700 hover:text-red-400 hover:bg-gray-100
+                          focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red-400
                           transition-all duration-200
-                          ${pathname === link.href ? "bg-blue-50 text-blue-700" : ""}
+                          ${pathname === link.href ? "bg-blue-50 text-red-400" : ""}
                         `}
                       >
                         {link.label}

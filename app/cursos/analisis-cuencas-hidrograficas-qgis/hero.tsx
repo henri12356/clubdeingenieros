@@ -159,8 +159,7 @@ const Hero: React.FC = () => {
           className="text-base sm:text-xl md:text-2xl lg:text-3xl text-white mb-4 sm:mb-6 md:mb-8 leading-relaxed drop-shadow-lg"
           variants={itemVariants}
         >
-          ANALISIS DE CUENCAS HIDROGRAFICAS CON QGIS QGIS APLICADO A CUENCAS
-          HIDROGRÁFICAS
+          ANALISIS DE CUENCAS HIDROGRAFICAS CON QGIS 
         </motion.p>
 
         <motion.p
