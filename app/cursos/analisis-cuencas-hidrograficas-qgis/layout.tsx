@@ -1,4 +1,5 @@
 import FloatingButtons from '@/app/floating-buttons';
+import { Analytics } from '@/app/GoogleAnalytics';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -89,6 +90,7 @@ export default function AnalisisCuencasLayout({
     <>
       {children}
       <FloatingButtons />
+      <Analytics />
     </>
   );
 }
