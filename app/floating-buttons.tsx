@@ -116,7 +116,7 @@ const FloatingButtons: React.FC = () => {
         <SocialFloatingButton
           icon={<FaWhatsapp />}
           label="WhatsApp"
-          href="https://wa.me/YOUR_PHONE_NUMBER?text=Hola%20quiero%20más%20información" // REMEMBER TO REPLACE!
+          href="https://wa.me/51918237837?text=Hola%20quiero%20más%20información" // REMEMBER TO REPLACE!
           bgColor="bg-green-500"
           hoverBgColor="hover:bg-green-600"
         />
@@ -168,7 +168,7 @@ const FloatingButtons: React.FC = () => {
         <SocialFloatingButton
           icon={<FaWhatsapp />}
           label="WhatsApp"
-          href="https://wa.me/YOUR_PHONE_NUMBER?text=Hola%20quiero%20más%20información" // REMEMBER TO REPLACE!
+          href="https://wa.me/51918237837?text=Hola%20quiero%20más%20información" // REMEMBER TO REPLACE!
           bgColor="bg-green-500"
           hoverBgColor="hover:bg-green-600"
           className="w-10 h-10 text-lg"
