@@ -4,6 +4,9 @@ import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Análisis de Cuencas Hidrográficas con QGIS | Club de Ingenieros',
+   verification: {
+    google: "s7rwNtOiZLTsTJkm10Dj-B1CNfnpkSjX7iDkXcjEVF4",
+  },
   description: 'Aprende análisis de cuencas hidrográficas con QGIS para gestión de recursos hídricos, prevención de desastres y planificación territorial. Curso completo con certificación.',
   keywords: [
     'análisis cuencas hidrográficas', 
