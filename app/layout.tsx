@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 import { Analytics } from "./GoogleAnalytics";
 
@@ -90,17 +91,17 @@ export const metadata: Metadata = {
 };
 
 // Datos estructurados para el logo en resultados de búsqueda
-const jsonLd = {
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  name: "Club de Ingenieros",
-  url: "https://clubdeingenieros.vercel.app",
-  logo: "https://clubdeingenieros.vercel.app/logo-google.png",
-  sameAs: [
-    "https://facebook.com/clubdeingenieros",
-    "https://twitter.com/clubingenieros"
-  ]
-};
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "Club de Ingenieros",
+    url: "https://clubdeingenieros.vercel.app",
+    logo: "https://clubdeingenieros.vercel.app/logo-google.png",
+    sameAs: [
+      "https://facebook.com/clubdeingenieros",
+      "https://twitter.com/clubingenieros"
+    ]
+  };
 
 export default function RootLayout({
   children,
@@ -111,10 +112,12 @@ export default function RootLayout({
     <html lang="es">
       <head>
         {/* Incluye los datos estructurados para el logo */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-        />
+        <Script
+    id="structured-data"
+    type="application/ld+json"
+    strategy="afterInteractive"
+    dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+  />
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         {children}

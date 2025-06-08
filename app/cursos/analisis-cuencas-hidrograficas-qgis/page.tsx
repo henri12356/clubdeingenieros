@@ -5,13 +5,13 @@ import Footer from '@/app/footer';
 import Navbar from '@/app/navbar';
 import Link from 'next/link';
 // Asumiendo que estos componentes son reutilizables o se adaptarán para este curso
-import Hero from './hero'; // Asumiendo Hero es aún necesario por encima de las dos columnas
-import Temario from './temario';
-import DocenteSection from './docente';
-import Planes from './planes';
 import Certificado from './certificado';
-import Promocion from './promocion';
 import CourseDetailsCard from './CoursePurchaseCard';
+import DocenteSection from './docente';
+import Hero from './hero'; // Asumiendo Hero es aún necesario por encima de las dos columnas
+import Planes from './planes';
+import Promocion from './promocion';
+import Temario from './temario';
 
 
 export default function AnalisisCuencasHidrograficasQGISPage() { // Renombrado el componente principal
@@ -31,7 +31,7 @@ export default function AnalisisCuencasHidrograficasQGISPage() { // Renombrado e
               "name": "Club de Ingenieros",
               "sameAs": "https://clubdeingenieros.vercel.app/cursos/analisis-cuencas-hidrograficas-qgis" // URL principal de tu organización
             },
-            "image": "https://clubdeingenieros.vercel.app/fondo.webp", // Ajusta a la imagen específica del curso si la hay, sino usa la genérica
+            "image": "https://clubdeingenieros.vercel.app/banner.webp", // Ajusta a la imagen específica del curso si la hay, sino usa la genérica
             "offers": {
               "@type": "Offer",
               "price": "99", // Precio del curso (ejemplo, ajusta si es diferente)
@@ -65,22 +65,22 @@ export default function AnalisisCuencasHidrograficasQGISPage() { // Renombrado e
       <Hero /> {/* Tu sección Hero existente, asegúrate de que su contenido sea para este curso */}
 
       {/* Área de contenido principal con dos columnas */}
-      <main className="container mx-auto px-4 sm:px-6 lg:px-8 py-8 flex flex-col lg:flex-row gap-8">
-       <div className="container mx-auto px-4 py-8 lg:flex lg:space-x-8">
+      <main className="container mx-auto px-2  py-8 flex flex-col lg:flex-row gap-8">
+       <div className="container mx-auto px-2 py-8 lg:flex lg:space-x-8">
         {/* Sección Izquierda: Temario */}
         <div className="lg:w-2/3 mb-8 lg:mb-0">
           <Temario /> {/* Asegúrate de que el contenido de Temario sea el del curso de cuencas */}
         </div>
-
         {/* Sección Derecha: Tarjeta de Detalles/Compra del Curso */}
         <div className="lg:w-1/3">
           <CourseDetailsCard /> {/* Asegúrate de que los detalles sean los de este curso */}
         </div>
+
        </div>
       </main>
+      <Certificado/>
       <DocenteSection/> {/* Asegúrate de que esta sección muestre el docente correcto para este curso */}
       <Planes/>
-      <Certificado/>
       <Promocion/>
       <Footer />
     </div>

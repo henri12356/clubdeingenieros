@@ -33,7 +33,7 @@ interface Plan {
 }
 
 // Número de WhatsApp al que se enviarán los mensajes
-const WHATSAPP_NUMBER = "51965934988"; // Reemplaza con tu número de WhatsApp real, incluyendo el código de país.
+const WHATSAPP_NUMBER = "51936972560"; // Reemplaza con tu número de WhatsApp real, incluyendo el código de país.
 
 // Datos de los planes
 const planesData: Plan[] = [

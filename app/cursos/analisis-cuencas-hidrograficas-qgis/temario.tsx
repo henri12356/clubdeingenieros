@@ -1,31 +1,28 @@
 "use client";
 
-import React, { useState, useEffect, useMemo } from "react";
 import { motion } from "framer-motion";
 import {
-  Search,
   BookText,
+  CalendarDays,
   Clock,
   Code,
   Download,
-  Link,
-  Layers,
   FileText,
-  Pointer,
-  CalendarDays,
   Hourglass,
+  Layers,
+  Link, // This Link conflicts with next/link, usually aliased or used directly
   MapPinned,
+  Pointer,
 } from "lucide-react";
+import React, { useMemo, useState } from "react";
 
-import { Input } from "@/components/ui/input";
-import { Button } from "@/components/ui/button";
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { Separator } from "@radix-ui/react-separator";
+import { Button } from "@/components/ui/button";
 
 interface Lesson {
   id: string;
@@ -439,7 +436,7 @@ const Temario: React.FC = () => {
 
   const handleWhatsAppClick = () => {
     // Replace with your actual WhatsApp group invite link
-    const whatsappLink = "https://chat.whatsapp.com/51918237837";
+    const whatsappLink = "https://chat.whatsapp.com/EmOMwgYKr5y6SUItkRNXfo";
     window.open(whatsappLink, "_blank");
   };
 
@@ -463,6 +460,7 @@ const Temario: React.FC = () => {
           </h1>
         </div>
       </motion.div>
+
       {/* Course Details */}
       <motion.div
         className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8 text-gray-700"
@@ -474,10 +472,10 @@ const Temario: React.FC = () => {
         </div>
         <div className="flex flex-col items-center space-x-2 bg-gray-50 p-3 rounded-lg shadow-sm">
           <CalendarDays className="h-5 w-5 text-red-600" />
-          <span className="font-semibold pr-1 text-sm">Inicio</span> 15 de Julio
-          de 2025
+          <span className="font-semibold pr-1 text-sm">Inicio</span> 15 de
+          Julio de 2025
         </div>
-        <div className="flex  flex-col items-center space-x-2 bg-gray-50 p-3 rounded-lg shadow-sm">
+        <div className="flex flex-col items-center space-x-2 bg-gray-50 p-3 rounded-lg shadow-sm">
           <Hourglass className="h-5 w-5 text-red-600" />
           <span className="font-semibold pr-1 ">Duración</span>{" "}
           <span className="text-sm text-center">
@@ -535,6 +533,7 @@ const Temario: React.FC = () => {
           </li>
         </ul>
       </motion.div>
+
       {/* Course Modules (Accordion) */}
       <Accordion type="single" collapsible className="w-full mb-8 sm:mb-10">
         <motion.div className="mb-4 sm:mb-6">
@@ -606,22 +605,21 @@ const Temario: React.FC = () => {
         </p>
         <ul className="list-none space-y-2 sm:space-y-3 pl-0">
           <li className="flex items-center text-gray-700 text-base sm:text-lg">
+            {/* It seems you imported 'Link' from 'lucide-react' which conflicts with 'next/link'. 
+                If you intend to use 'lucide-react' Link, you might want to alias it: 
+                import { Link as LucideLink } from "lucide-react";
+                And use LucideLink here. Or if it's just an icon, keep it as is.
+            */}
             <Link className="h-4 w-4 sm:h-5 sm:w-5 text-gray-500 mr-2 sm:mr-3 flex-shrink-0" />
-            <span>
-              QGIS 
-            </span>
+            <span>QGIS</span>
           </li>
           <li className="flex items-center text-gray-700 text-base sm:text-lg">
             <Link className="h-4 w-4 sm:h-5 sm:w-5 text-gray-500 mr-2 sm:mr-3 flex-shrink-0" />
-            <span>
-              Microsoft Excel
-            </span>
+            <span>Microsoft Excel</span>
           </li>
           <li className="flex items-center text-gray-700 text-base sm:text-lg">
             <Link className="h-4 w-4 sm:h-5 sm:w-5 text-gray-500 mr-2 sm:mr-3 flex-shrink-0" />
-            <span>
-              Google Earth: 
-            </span>
+            <span>Google Earth:</span>
           </li>
         </ul>
       </motion.div>
@@ -653,7 +651,6 @@ const Temario: React.FC = () => {
               size="sm"
               className="w-full sm:w-auto text-blue-500 hover:text-blue-700 justify-center sm:justify-start"
             >
-              <Download className="h-4 w-4 mr-1" /> Descargar
             </Button>
           </li>
           <li className="flex flex-col sm:flex-row sm:items-center text-gray-700 text-base sm:text-lg py-2 rounded-md hover:bg-gray-50 transition-colors">
@@ -670,15 +667,13 @@ const Temario: React.FC = () => {
               size="sm"
               className="w-full sm:w-auto text-blue-500 hover:text-blue-700 justify-center sm:justify-start"
             >
-              <Link className="h-4 w-4 mr-1" /> Ir al Enlace
             </Button>
           </li>
           <li className="flex flex-col sm:flex-row sm:items-center text-gray-700 text-base sm:text-lg py-2 rounded-md hover:bg-gray-50 transition-colors">
             <div className="flex items-center mb-2 sm:mb-0 sm:flex-1">
               <BookText className="h-4 w-4 sm:h-5 sm:w-5 text-gray-500 mr-2 sm:mr-3 flex-shrink-0" />
               <span>
-                Ejercicios de práctica avanzados y datasets complementarios
-                (ZIP)
+                Ejercicios de práctica avanzados y datasets complementarios (ZIP)
               </span>{" "}
               {/* Más descriptivo */}
             </div>
@@ -687,7 +682,6 @@ const Temario: React.FC = () => {
               size="sm"
               className="w-full sm:w-auto text-blue-500 hover:text-blue-700 justify-center sm:justify-start"
             >
-              <Download className="h-4 w-4 mr-1" /> Descargar
             </Button>
           </li>
         </ul>
@@ -698,7 +692,7 @@ const Temario: React.FC = () => {
         className="mt-10 pt-6 border-t border-gray-200 text-center flex flex-col items-center"
         variants={itemVariants}
       >
-        <p className="text-xl sm:text-2xl md:text-3xl font-extrabold text-gray-900 mb-6 px-4 leading-snug">
+        <p className="text-lg sm:text-2xl md:text-3xl font-extrabold text-gray-900 mb-6 px-4 leading-snug">
           ¡NO TE PIERDAS EL INICIO! ÚNETE A NUESTRA COMUNIDAD PRIVADA DE
           WHATSAPP PARA RECIBIR EL LINK DE ZOOM DEL CURSO DE QGIS
         </p>
@@ -708,7 +702,7 @@ const Temario: React.FC = () => {
         >
           <Pointer className="h-6 w-6 sm:h-7 sm:w-7 transition-transform group-hover:scale-110 rotate-12" />
           <span>(HAGA CLIC AQUÍ)</span>
-          <Pointer className="h-6 w-6 sm:h-7 sm:w-7 transition-transform group-hover:scale-110 -rotate-12 transform scale-x-[-1]" />
+          <Pointer className="h-6 w-6 sm:h-7 sm:w-7 transition-transform group-hover:scale-110 -rotate-12" />
         </Button>
       </motion.div>
     </motion.div>

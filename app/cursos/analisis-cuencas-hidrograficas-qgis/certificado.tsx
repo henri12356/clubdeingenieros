@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from "react";
-import Image from "next/image";
 import { motion } from "framer-motion";
+import Image from "next/image";
+import { useEffect, useState } from "react";
 
 const Certificado = () => {
   // Estado para controlar qué imagen mostrar
@@ -17,7 +17,7 @@ const Certificado = () => {
 
   // Función para cambiar a la imagen anterior
   const goToPrevious = () => {
-    setCurrentImageIndex((prevIndex) => 
+    setCurrentImageIndex((prevIndex) =>
       prevIndex === 0 ? images.length - 1 : prevIndex - 1
     );
   };
@@ -110,7 +110,7 @@ const Certificado = () => {
   return (
     <section className="bg-white py-16 sm:py-20 md:py-24 px-4 sm:px-6 lg:px-8 font-sans text-center overflow-hidden relative">
       {/* Opcional: Añade un patrón de fondo sutil para mayor profundidad */}
-      <div className="absolute inset-0 bg-[url('/path/to/subtle-pattern.svg')] opacity-5 z-0 pointer-events-none"></div>
+      <div className="absolute inset-0  opacity-5 z-0 pointer-events-none"></div>
 
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Título Principal de la sección */}
@@ -121,9 +121,15 @@ const Certificado = () => {
           whileInView="visible"
           viewport={{ once: true, amount: 0.5 }}
         >
-          <span className="text-red-600 text-3xl md:text-6xl">VALIDACIÓN Y</span>{" "}
-          <span className="text-red-600 text-3xl md:text-6xl">CERTIFICACIÓN DEL CURSO DE</span>{" "}
-          <span className="text-slate-950 text-3xl md:text-6xl">ANÁLISIS DE CUENCAS HIDROGRÁFICAS CON QGIS</span>
+          <span className="text-red-600 text-3xl md:text-6xl">
+            VALIDACIÓN Y
+          </span>{" "}
+          <span className="text-red-600 text-3xl md:text-6xl">
+            CERTIFICACIÓN DEL CURSO DE
+          </span>{" "}
+          <span className="text-slate-950 text-3xl md:text-6xl">
+            ANÁLISIS DE CUENCAS HIDROGRÁFICAS CON QGIS
+          </span>
         </motion.h2>
 
         {/* Sección del Certificado */}
@@ -135,9 +141,13 @@ const Certificado = () => {
             whileInView="visible"
             viewport={{ once: true, amount: 0.5 }}
           >
-            Al finalizar el curso de Análisis de Cuencas Hidrográficas con QGIS, el programa de capacitación será certificado con 120 horas académicas, con el respaldo de Educare Internacional y auspiciado por la Cámara de Comercio de Lima, garantizando un reconocimiento profesional de alto nivel.
+            Al finalizar el curso de Análisis de Cuencas Hidrográficas con QGIS,
+            el programa de capacitación será certificado con 120 horas
+            académicas, con el respaldo de Educare Internacional y auspiciado
+            por la Cámara de Comercio de Lima, garantizando un reconocimiento
+            profesional de alto nivel.
           </motion.p>
-          
+
           {/* Contenedor del carrusel con botones de navegación */}
           <div className="relative">
             <motion.div
@@ -157,40 +167,60 @@ const Certificado = () => {
                 className="rounded-xl border border-gray-100"
               />
             </motion.div>
-            
+
             {/* Botones de navegación */}
             <div className="flex justify-center mt-4 space-x-4 cursor-pointer">
-              <button 
+              <button
                 onClick={goToPrevious}
                 className="px-4 py-2 cursor-pointer bg-red-600 text-white rounded-full hover:bg-red-700 transition-colors duration-300 flex items-center"
                 aria-label="Imagen anterior"
               >
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                  <path fillRule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clipRule="evenodd" />
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-5 w-5"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                >
+                  <path
+                    fillRule="evenodd"
+                    d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"
+                    clipRule="evenodd"
+                  />
                 </svg>
                 <span className="ml-1">Anterior</span>
               </button>
-              
+
               {/* Indicadores de imágenes */}
               <div className="flex items-center space-x-2 cursor-pointer">
                 {images.map((_, index) => (
                   <button
                     key={index}
                     onClick={() => setCurrentImageIndex(index)}
-                    className={`w-3 h-3 rounded-full ${currentImageIndex === index ? 'bg-red-600' : 'bg-gray-300'}`}
+                    className={`w-3 h-3 rounded-full ${
+                      currentImageIndex === index ? "bg-red-600" : "bg-gray-300"
+                    }`}
                     aria-label={`Ir a imagen ${index + 1}`}
                   />
                 ))}
               </div>
-              
-              <button 
+
+              <button
                 onClick={goToNext}
                 className="px-4 py-2 cursor-pointer bg-red-600 text-white rounded-full hover:bg-red-700 transition-colors duration-300 flex items-center"
                 aria-label="Siguiente imagen"
               >
                 <span className="mr-1">Siguiente</span>
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                  <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" />
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-5 w-5"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                >
+                  <path
+                    fillRule="evenodd"
+                    d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                    clipRule="evenodd"
+                  />
                 </svg>
               </button>
             </div>
@@ -270,15 +300,23 @@ const Certificado = () => {
         </motion.div>
 
         {/* Llamada a la acción al final */}
-        <motion.p
-          className="text-lg sm:text-xl md:text-2xl font-extrabold text-white mt-16 md:mt-20 px-6 py-4 bg-red-600 rounded-full shadow-lg inline-block cursor-pointer hover:bg-red-700 transition-all duration-300 transform hover:scale-105 active:scale-95"
-          variants={ctaVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.5 }}
+        <a
+          href="https://wa.me/51936972560?text=Hola%2C%20me%20interesa%20el%20curso%20de%20An%C3%A1lisis%20de%20Cuencas%20Hidrogr%C3%A1ficas%20con%20QGIS.%20%C2%BFPodr%C3%ADan%20darme%20m%C3%A1s%20informaci%C3%B3n%3F"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-block"
         >
-          ¡OBTÉN TU CERTIFICACIÓN EN ANÁLISIS DE CUENCAS HIDROGRÁFICAS CON QGIS Y POTENCIA TU CARRERA!
-        </motion.p>
+          <motion.p
+            className="text-sm sm:text-xl md:text-2xl font-extrabold text-white mt-16 md:mt-20 px-6 py-4 bg-red-600 rounded-full shadow-lg cursor-pointer hover:bg-red-700 transition-all duration-300 transform hover:scale-105 active:scale-95"
+            variants={ctaVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.5 }}
+          >
+            ¡OBTÉN TU CERTIFICACIÓN EN ANÁLISIS DE CUENCAS HIDROGRÁFICAS CON
+            QGIS Y POTENCIA TU CARRERA!
+          </motion.p>
+        </a>
       </div>
     </section>
   );

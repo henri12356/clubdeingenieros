@@ -1,9 +1,9 @@
 // components/floating-buttons.tsx
 "use client";
 
-import { motion, AnimatePresence } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
-import { FaWhatsapp, FaFacebookF, FaArrowRight } from "react-icons/fa";
+import { FaArrowRight, FaFacebookF, FaWhatsapp } from "react-icons/fa";
 import { HiOutlineDotsVertical } from "react-icons/hi";
 
 // --- Types ---
@@ -116,14 +116,14 @@ const FloatingButtons: React.FC = () => {
         <SocialFloatingButton
           icon={<FaWhatsapp />}
           label="WhatsApp"
-          href="https://wa.me/51918237837?text=Hola%20quiero%20más%20información" // REMEMBER TO REPLACE!
+          href="https://wa.me/51936972560?text=Hola%20quiero%20más%20información" // REMEMBER TO REPLACE!
           bgColor="bg-green-500"
           hoverBgColor="hover:bg-green-600"
         />
         <SocialFloatingButton
           icon={<FaFacebookF />}
           label="Facebook"
-          href="https://www.facebook.com/YOUR_FACEBOOK_PAGE" // REMEMBER TO REPLACE!
+          href="https://www.facebook.com/clubdeingenieroshispano" // REMEMBER TO REPLACE!
           bgColor="bg-blue-600"
           hoverBgColor="hover:bg-blue-700"
         />
