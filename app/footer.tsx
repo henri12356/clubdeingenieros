@@ -135,7 +135,7 @@ const Footer = () => {
           {/* Section: JEDteam (About) */}
           <div className="py-2">
             <h2 className="text-lg font-bold mb-4 text-red-600">
-              Asociacion de Enfermeros
+              Club de Ingenieros
             </h2>
             <nav>
               <ul className="space-y-2 sm:space-y-3">
