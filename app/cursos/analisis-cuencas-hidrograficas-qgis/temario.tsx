@@ -472,14 +472,14 @@ const Temario: React.FC = () => {
         </div>
         <div className="flex flex-col items-center space-x-2 bg-gray-50 p-3 rounded-lg shadow-sm">
           <CalendarDays className="h-5 w-5 text-red-600" />
-          <span className="font-semibold pr-1 text-sm">Inicio</span> 15 de
-          Julio de 2025
+          <span className="font-semibold pr-1 text-sm">Inicio</span> 16 de
+          Junio de 2025
         </div>
         <div className="flex flex-col items-center space-x-2 bg-gray-50 p-3 rounded-lg shadow-sm">
           <Hourglass className="h-5 w-5 text-red-600" />
           <span className="font-semibold pr-1 ">Duración</span>{" "}
           <span className="text-sm text-center">
-            03 semanas (120 horas académicas)
+            03 semanas (140 horas académicas)
           </span>
         </div>
         <div className="flex flex-col items-center space-x-2 bg-gray-50 p-3 rounded-lg shadow-sm">

@@ -22,8 +22,8 @@ const CourseDetailsCard: React.FC = () => {
   const PROMOTION_END_DATE = {
     year: 2025,
     month: 6, // June
-    day: 15,
-    hour: 12,
+    day: 16,
+    hour: 19,
     minute: 0,
   };
 
@@ -238,7 +238,7 @@ const CourseDetailsCard: React.FC = () => {
           variants={buttonVariants}
         >
           <a
-            href="https://wa.me/51936972560?text=Quiero%20comprar%20el%20curso%20de%20AN%C3%81LISIS%20DE%20CUENCAS%20HIDROGR%C3%81FICAS%20CON%20QGIS"
+            href="https://wa.me/51927545815?text=Quiero%20comprar%20el%20curso%20de%20AN%C3%81LISIS%20DE%20CUENCAS%20HIDROGR%C3%81FICAS%20CON%20QGIS"
             target="_blank"
             rel="noopener noreferrer"
             className="w-full bg-red-600 hover:bg-red-400 text-white text-lg font-bold py-3 rounded-lg transition-colors shadow-md text-center inline-block"
@@ -301,7 +301,7 @@ const CourseDetailsCard: React.FC = () => {
         </div>
       </div>
 
-      {/* Certificate Section */}
+      {/* Certificate Section
       <div className="pt-6">
         <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">
           ¡Obtén tu Certificado al Finalizar!
@@ -326,7 +326,7 @@ const CourseDetailsCard: React.FC = () => {
             </p>
           </Link>
         </div>
-      </div>
+      </div> */}
     </motion.div>
   );
 };

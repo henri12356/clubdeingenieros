@@ -49,40 +49,33 @@ export default function AnalisisCuencasHidrograficasQGISPage() { // Renombrado e
         }}
       />
 
-      <Navbar />
+      {/* <Navbar /> */}
 
       {/* Breadcrumbs para SEO y navegación */}
-      <nav aria-label="Ruta de navegación" className="container mx-auto px-4 py-3 text-sm bg-white">
-        <ol className="flex space-x-2">
-          <li><Link href="/" className="text-blue-600 hover:underline">Inicio</Link></li>
-          <li>/</li>
-          <li><Link href="/cursos" className="text-blue-600 hover:underline">Cursos</Link></li>
-          <li>/</li>
-          <li className="text-gray-600">Análisis de Cuencas Hidrográficas con QGIS</li> {/* Texto del curso actual */}
-        </ol>
-      </nav>
+    
 
       <Hero /> {/* Tu sección Hero existente, asegúrate de que su contenido sea para este curso */}
 
       {/* Área de contenido principal con dos columnas */}
-      <main className="container mx-auto px-2  py-8 flex flex-col lg:flex-row gap-8">
-       <div className="container mx-auto px-2 py-8 lg:flex lg:space-x-8">
-        {/* Sección Izquierda: Temario */}
-        <div className="lg:w-2/3 mb-8 lg:mb-0">
-          <Temario /> {/* Asegúrate de que el contenido de Temario sea el del curso de cuencas */}
-        </div>
-        {/* Sección Derecha: Tarjeta de Detalles/Compra del Curso */}
-        <div className="lg:w-1/3">
-          <CourseDetailsCard /> {/* Asegúrate de que los detalles sean los de este curso */}
-        </div>
-
-       </div>
-      </main>
+     <main className="container mx-auto px-2 py-8 flex flex-col lg:flex-row ">
+  <div className="container mx-auto px-2 py-8 lg:flex lg:space-x-8 md:gap-16">
+    {/* On mobile screens, CourseDetailsCard will appear first due to 'order-first'.
+        On large screens (lg), 'lg:order-last' makes it appear last in the flex container, effectively putting it on the right. */}
+    <div className="lg:w-1/3 order-first lg:order-last pb-12">
+      <CourseDetailsCard /> {/* Asegúrate de que los detalles sean los de este curso */}
+    </div>
+    {/* On mobile screens, Temario will appear after CourseDetailsCard.
+        On large screens (lg), 'lg:order-first' makes it appear first in the flex container, effectively putting it on the left. */}
+    <div className="lg:w-2/3 mb-8 lg:mb-0 lg:order-first">
+      <Temario /> {/* Asegúrate de que el contenido de Temario sea el del curso de cuencas */}
+    </div>
+  </div>
+</main>
       <Certificado/>
       <DocenteSection/> {/* Asegúrate de que esta sección muestre el docente correcto para este curso */}
       <Planes/>
       <Promocion/>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }

@@ -147,9 +147,8 @@ const Promocion = () => {
               {isClientHydrated ? availableCoupons : "..."}
             </div>
           )}
-          <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4 w-full px-2">
-            {" "}
-            {/* Added w-full px-2 for buttons */}
+          {/* <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4 w-full px-2">
+
             <button
               onClick={() => handlePurchaseClick("Yape")}
               className="w-full sm:w-auto px-6 py-3 rounded-full bg-[#6e2c9a] text-white font-semibold hover:bg-purple-600 transition-colors disabled:opacity-50 disabled:cursor-not-allowed text-sm md:text-base"
@@ -177,7 +176,7 @@ const Promocion = () => {
             >
               Transferencia
             </button>
-          </div>
+          </div> */}
         </div>
 
         {/* Countdown and Product Info Card */}
@@ -424,7 +423,7 @@ const Promocion = () => {
         <div className="mt-6 flex flex-col sm:flex-row justify-center items-center gap-4">
          
           <a
-            href="https://wa.me/51936972560"
+            href="https://wa.me/51927545815"
             target="_blank"
             rel="noopener noreferrer"
             className="bg-green-600 text-white font-semibold px-6 py-3 rounded-full shadow hover:bg-green-700 transition flex items-center gap-2 text-sm md:text-base"
@@ -438,7 +437,7 @@ const Promocion = () => {
               {" "}
               <path d="M20.52 3.48A11.93 11.93 0 0 0 12 0a11.93 11.93 0 0 0-8.52 3.48A11.93 11.93 0 0 0 0 12c0 2.1.54 4.17 1.57 6.02L0 24l5.99-1.56A11.93 11.93 0 0 0 12 24c3.18 0 6.17-1.24 8.48-3.48A11.93 11.93 0 0 0 24 12c0-3.18-1.24-6.17-3.48-8.52zM12 21.82c-2.26 0-4.45-.66-6.3-1.9l-.45-.29-3.55.93.95-3.46-.3-.48A9.89 9.89 0 0 1 2.18 12c0-5.42 4.4-9.82 9.82-9.82S21.82 6.58 21.82 12 17.42 21.82 12 21.82zm5.6-7.08c-.28-.14-1.65-.82-1.9-.92s-.44-.14-.62.14c-.19.28-.72.92-.88 1.1-.16.18-.32.2-.6.07-.28-.14-1.18-.44-2.25-1.4-.83-.74-1.4-1.65-1.56-1.92s-.02-.42.12-.56c.13-.13.28-.32.42-.48.14-.16.18-.28.28-.46.09-.18.05-.34-.02-.48-.07-.14-.62-1.5-.85-2.06-.22-.53-.45-.46-.6-.46h-.52c-.18 0-.46.07-.7.34s-.92.9-.92 2.2.94 2.56 1.07 2.74c.14.18 1.86 2.84 4.5 3.98.63.27 1.12.43 1.5.55.63.2 1.2.17 1.65.1.5-.08 1.65-.67 1.88-1.32.23-.64.23-1.18.16-1.32-.06-.13-.26-.2-.54-.34z" />{" "}
             </svg>
-            936 972 560
+            927 545 815
           </a>
         </div>
       </div>

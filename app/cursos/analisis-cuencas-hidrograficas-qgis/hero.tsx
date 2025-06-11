@@ -16,8 +16,8 @@ const Hero: React.FC = () => {
   const PROMOTION_END_DATE = {
     year: 2025,
     month: 6,
-    day: 25,
-    hour: 10,
+    day: 16,
+    hour: 19,
     minute: 0,
   };
 
@@ -182,7 +182,7 @@ const Hero: React.FC = () => {
         </motion.p>
 
         <motion.a
-          href="https://chat.whatsapp.com/your_whatsapp_group_link"
+          href="https://chat.whatsapp.com/EmOMwgYKr5y6SUItkRNXfo"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 sm:py-3 sm:px-6 md:py-4 md:px-8 rounded-full text-sm sm:text-base md:text-xl shadow-lg transition duration-300 ease-in-out transform hover:scale-105 active:scale-95 group"

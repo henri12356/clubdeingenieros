@@ -142,7 +142,7 @@ const Certificado = () => {
             viewport={{ once: true, amount: 0.5 }}
           >
             Al finalizar el curso de Análisis de Cuencas Hidrográficas con QGIS,
-            el programa de capacitación será certificado con 120 horas
+            el programa de capacitación será certificado con 140 horas
             académicas, con el respaldo de Educare Internacional y auspiciado
             por la Cámara de Comercio de Lima, garantizando un reconocimiento
             profesional de alto nivel.

@@ -116,7 +116,7 @@ const FloatingButtons: React.FC = () => {
         <SocialFloatingButton
           icon={<FaWhatsapp />}
           label="WhatsApp"
-          href="https://wa.me/51936972560?text=Hola%20quiero%20más%20información" // REMEMBER TO REPLACE!
+          href="https://wa.me/51927545815?text=Hola%20quiero%20más%20información" // REMEMBER TO REPLACE!
           bgColor="bg-green-500"
           hoverBgColor="hover:bg-green-600"
         />
@@ -134,7 +134,7 @@ const FloatingButtons: React.FC = () => {
           initial={false}
           animate={showMoreOptions ? "open" : "closed"}
         >
-          <motion.button
+          {/* <motion.button
             className="flex items-center justify-center w-12 h-12 rounded-full shadow-lg text-white text-xl bg-gray-700 hover:bg-gray-800 transition-all duration-300 transform hover:scale-110"
             onClick={() => setShowMoreOptions(!showMoreOptions)}
             aria-label="Más opciones de contacto"
@@ -142,7 +142,7 @@ const FloatingButtons: React.FC = () => {
             whileTap={{ scale: 0.9 }}
           >
             <HiOutlineDotsVertical />
-          </motion.button>
+          </motion.button> */}
           <AnimatePresence>
             {showMoreOptions && (
               <motion.div
