@@ -3,7 +3,6 @@
 import { motion } from "framer-motion";
 import { Award, BookOpen, CheckCircle, Users } from "lucide-react";
 import Image from "next/image";
-import Link from "next/link";
 import React, { useEffect, useState } from "react";
 
 interface TimeLeft {
@@ -122,7 +121,7 @@ const CourseDetailsCard: React.FC = () => {
             </span>
           </div>
           <a
-            href="https://wa.me/51936972560?text=Quiero%20comprar%20el%20curso%20de%20AN%C3%81LISIS%20DE%20CUENCAS%20HIDROGR%C3%81FICAS%20CON%20QGIS"
+            href="https://wa.me/51927545815?text=Quiero%20comprar%20el%20curso%20de%20AN%C3%81LISIS%20DE%20CUENCAS%20HIDROGR%C3%81FICAS%20CON%20QGIS"
             target="_blank"
             rel="noopener noreferrer"
             className="w-full bg-red-600 hover:bg-red-400 text-white text-lg font-bold py-3 rounded-lg transition-colors shadow-md text-center inline-block"
