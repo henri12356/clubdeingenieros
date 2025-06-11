@@ -176,7 +176,7 @@ const CourseDetailsCard: React.FC = () => {
           </h3>
           <div className="relative w-full rounded-lg overflow-hidden">
             <Image
-              src="/banner.webp"
+              src="/bannerclaro.webp"
               alt="Certificado del Curso"
               layout="responsive"
               width={800}
@@ -203,7 +203,7 @@ const CourseDetailsCard: React.FC = () => {
       {/* Reference Image Section */}
       <div className="relative w-full rounded-lg overflow-hidden mb-6">
         <Image
-          src="/banner.webp"
+          src="/bannerclaro.webp"
           alt="Referencia del Curso"
           layout="responsive"
           width={600}

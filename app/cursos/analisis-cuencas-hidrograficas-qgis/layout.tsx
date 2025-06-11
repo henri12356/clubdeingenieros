@@ -4,7 +4,7 @@ import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Análisis de Cuencas Hidrográficas con QGIS | Club de Ingenieros',
-   verification: {
+  verification: {
     google: "s7rwNtOiZLTsTJkm10Dj-B1CNfnpkSjX7iDkXcjEVF4",
   },
   description: 'Aprende análisis de cuencas hidrográficas con QGIS para gestión de recursos hídricos, prevención de desastres y planificación territorial. Curso completo con certificación.',
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     'análisis hidrológico'
   ],
   
-  // OpenGraph optimizado para mostrar imágenes
+  // OpenGraph optimizado corregido
   openGraph: {
     title: 'Análisis de Cuencas Hidrográficas con QGIS | Club de Ingenieros',
     description: 'Curso profesional sobre análisis de cuencas hidrográficas utilizando QGIS, ideal para ingenieros y profesionales del sector hídrico y ambiental.',
@@ -32,7 +32,14 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: 'https://clubdeingenieros.vercel.app/banner.webp', // Imagen específica para este curso
+        url: 'https://clubdeingenieros.vercel.app/banner.webp',
+        width: 1200,
+        height: 630,
+        alt: 'Análisis de Cuencas Hidrográficas con Software QGIS - Club de Ingenieros',
+        type: 'image/webp', // Corregido a webp para coincidir con el formato
+      },
+      {
+        url: 'https://clubdeingenieros.vercel.app/banner.jpg', // Versión JPEG como fallback
         width: 1200,
         height: 630,
         alt: 'Análisis de Cuencas Hidrográficas con Software QGIS - Club de Ingenieros',
@@ -43,21 +50,21 @@ export const metadata: Metadata = {
     locale: 'es_PE',
   },
 
-  // Twitter Cards optimizado
+  // Twitter Cards optimizado corregido
   twitter: {
     card: 'summary_large_image',
-    site: '@ClubIngenierosPE', // Cuenta Twitter específica
+    site: '@ClubIngenierosPE',
     creator: '@ClubIngenierosPE',
     title: 'Análisis de Cuencas Hidrográficas con QGIS | Club de Ingenieros',
     description: 'Domina el análisis hidrológico con QGIS en este curso certificado para ingenieros y especialistas ambientales.',
-    images: {
-      url: 'https://clubdeingenieros.vercel.app/banner.webp', // Imagen optimizada para Twitter
-      alt: 'Curso profesional de QGIS para análisis de cuencas',
-    },
+    images: [
+      'https://clubdeingenieros.vercel.app/banner.webp', // Formato preferido
+      'https://clubdeingenieros.vercel.app/banner.jpg' // Fallback
+    ],
   },
 
   alternates: {
-    canonical: 'https://clubdeingenieros.vercel.app/banner.webp',
+    canonical: 'https://clubdeingenieros.vercel.app/cursos/analisis-cuencas-hidrograficas-qgis', // Corregido para apuntar a la página, no a la imagen
   },
 
   robots: {
