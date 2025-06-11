@@ -301,7 +301,7 @@ const Certificado = () => {
 
         {/* Llamada a la acción al final */}
         <a
-          href="https://wa.me/51936972560?text=Hola%2C%20me%20interesa%20el%20curso%20de%20An%C3%A1lisis%20de%20Cuencas%20Hidrogr%C3%A1ficas%20con%20QGIS.%20%C2%BFPodr%C3%ADan%20darme%20m%C3%A1s%20informaci%C3%B3n%3F"
+          href="https://wa.me/51927545815?text=Hola%2C%20me%20interesa%20el%20curso%20de%20An%C3%A1lisis%20de%20Cuencas%20Hidrogr%C3%A1ficas%20con%20QGIS.%20%C2%BFPodr%C3%ADan%20darme%20m%C3%A1s%20informaci%C3%B3n%3F"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-block"

@@ -114,7 +114,7 @@ const Promocion = () => {
   };
 
   return (
-    <div className="container mx-auto px-4 py-8 relative pt-20">
+    <div className="container mx-auto px-4 py-8 relative pt-20 pb-32">
       {/* Promotion Header */}
       <div className="bg-red-600 text-white text-center py-3 rounded-lg mb-8 flex items-center justify-center">
         <span className="text-2xl mr-2">⚠️</span>
